@@ -2,7 +2,7 @@
 
 | Pontos                 |
 | -------                |
-|   |
+|   18                   |
 
 Avaliação 1 de elementos. 
 
@@ -31,7 +31,7 @@ As questões que possuem código (`.vhd`) devem ser implementadas nos arquivos l
 
 **LEMBRE DE REALIZAR COMMIT (A CADA QUESTÃO) E DAR PUSH AO FINALIZAR**
 
-### 1 
+### 1 - 6 pts
 
 | Arquivo                | pnts   |
 | -------                | ----   |
@@ -47,13 +47,17 @@ a) (4 HW) Escreva em VHDL uma representação do circuito verificador de paridad
 
 b) (2 HW) Gere o RTL do circuito e salve no repositório com o nome: `rtl.png`
 
-### 2 
+### 2 - 12 pts
 
 | Arquivo                | pnts    |
 | -------                | ----    |
-| `src/rtl/questao2.vhd` | 10 (HW) |
+| `src/rtl/questao2.vhd` | 12 (HW) |
+|    - `XeqY` | 4 pts|
+|    - `XltY` | 8 pts| 
 
 Você resolveu melhorar a ULA do Z01.1, para isso irá avaliar a ideia em uma versão simplificada que opera apenas com **dois bits de largura**. Sua ideia foi a de adicionar informações que comparam a entrada `X` com a entrada `Y` da ULA, fornecendo os seguintes sinais: `XeqY` (x igual a y) e `XltY` (x menor que y).
+
+> Considere números codificados em complemento de dois.
 
 - `XeqY = 1` quando a entrada X for igual a entrada Y (`X == Y`)
 - `XltY = 1` quando a entrada X for menor que a entrada Y (`X < Y`)
@@ -74,4 +78,5 @@ Escreva em VHDL o código que implementa o comparador (`src/rtl/questao2.vnd`).
 > Dica
 >   - Faça a tabela verdade, encontre as equações e implemente em VHDL.
 >   - X e Y são entradas de 2 bits cada
+>   - Complemento de dois
 >   - XeqY e XltY são saídas de 1 bit cada

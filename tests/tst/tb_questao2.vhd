@@ -29,24 +29,24 @@ begin
     test_runner_setup(runner, runner_cfg);
 
     X<= "00"; Y<= "00";  wait for 200 ps;
-    assert(o = "10")  report "Falha em teste: 1" severity error;
+    assert(o = "10")  report "Falha em teste: eq" severity error;
 
     X<= "10"; Y<= "10";  wait for 200 ps;
-    assert(o = "10")  report "Falha em teste: 1" severity error;
+    assert(o = "10")  report "Falha em teste: eq" severity error;
 
     X<= "11"; Y<= "11";  wait for 200 ps;
-    assert(o = "10")  report "Falha em teste: 1" severity error;
+    assert(o = "10")  report "Falha em teste: eq" severity error;
+
+    X<= "01"; Y<= "01";  wait for 200 ps;
+    assert(o = "10")  report "Falha em teste: eq" severity error;
 
     X<= "10"; Y<= "00";  wait for 200 ps;
-    assert(o = "00")  report "Falha em teste: 1" severity error;
-
-    X<= "00"; Y<= "10";  wait for 200 ps;
-    assert(o = "01")  report "Falha em teste: 1" severity error;
+    assert(o = "01")  report "Falha em teste: lt" severity error;
 
     X<= "01"; Y<= "10";  wait for 200 ps;
-    assert(o = "01")  report "Falha em teste: 1" severity error;
+    assert(o = "00")  report "Falha em teste: lt" severity error;
 
-    X<= "01"; Y<= "11";  wait for 200 ps;
+    X<= "11"; Y<= "01";  wait for 200 ps;
     assert(o = "01")  report "Falha em teste: 1" severity error;
     test_runner_cleanup(runner); -- Simulacao acaba aqui
 
