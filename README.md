@@ -62,7 +62,7 @@ Você resolveu melhorar a ULA do Z01.1, para isso irá avaliar a ideia em uma ve
 - `XeqY = 1` quando a entrada X for igual a entrada Y (`X == Y`)
 - `XltY = 1` quando a entrada X for menor que a entrada Y (`X < Y`)
 
-O componente a ser criado possui a estrutura a seguir (entity do `questao5.vhd`):
+O componente a ser criado possui a estrutura a seguir (entity do `questao2.vhd`):
 
 ```
  x1,x0 |------------|
